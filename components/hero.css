@@ -1,0 +1,40 @@
+.hero {
+  --image-column: span 12;
+  --text-column: span 12;
+
+  padding-block: clamp(1rem, 5vw, 4rem);
+}
+
+.hero__content {
+  align-items: center;
+}
+
+.hero-content__text {
+  grid-column: var(--text-column);
+}
+
+.hero-content__image {
+  grid-column: var(--image-column);
+}
+
+.hero__image {
+  height: auto;
+  width: 100%;
+}
+
+.hero__info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.hero__info + .hero__info {
+  margin-top: 1.5rem;
+}
+
+@media (min-width: 850px) {
+  .hero {
+    --image-column: span 5;
+    --text-column: span 7;
+  }
+}

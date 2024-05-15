@@ -1,0 +1,175 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
+
+@font-face {
+  font-display: swap;
+  font-family: Canela;
+  font-style: normal;
+  font-weight: 300;
+  src: url("../fonts/Canela-Light.woff2") format("woff2");
+}
+@font-face {
+  font-display: swap;
+  font-family: Canela;
+  font-style: italic;
+  font-weight: 300;
+  src: url("../fonts/Canela-LightItalic.woff2") format("woff2");
+}
+
+/* GLOBAL */
+
+:root {
+  --content-width: 62.5rem;
+  /* COLORS */
+  --color-black: #1d252c;
+  --color-blue: #033662;
+  --color-blue--75: rgba(3, 54, 98, 0.75);
+  --color-sand: #fcf9f5;
+  --color-white: #fff;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+figure {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+p {
+  font-family: "Manrope", sans-serif;
+  line-height: 1.6;
+}
+
+/* COMPONENTS */
+
+.border\:image {
+  position: relative;
+}
+
+.border\:image img {
+  display: block;
+  width: 100%;
+}
+
+.border\:image::before {
+  bottom: -1rem;
+  left: -1rem;
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+
+  border: 1px solid var(--color-black);
+  content: "";
+}
+
+/* LAYOUT */
+
+.container {
+  max-width: var(--content-width);
+  margin: 0 auto;
+  padding-inline: 1rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 1rem;
+}
+
+.flex {
+  display: flex;
+}
+
+.justify-content\:center {
+  justify-content: center;
+}
+
+.grid-column\:span-12 {
+  grid-column: span 12;
+}
+
+@media (min-width: 1000px) {
+  .md\:grid-column\:span-6 {
+    grid-column: span 6;
+  }
+}
+
+.padded-section {
+  padding-block: clamp(1rem, 5vw, 4rem);
+}
+
+/* TYPOGRAPHY */
+
+.font-color\:black {
+  color: var(--color-black);
+}
+
+.font-family\:heading {
+  font-family: "Canela", serif;
+  font-weight: 300;
+}
+
+.font-family\:text {
+  font-family: "Manrope", sans-serif;
+}
+
+.font-size\:label {
+  font-size: 1.25rem;
+}
+
+.font-size\:large {
+  font-size: clamp(1.15rem, 4vw, 1.5rem);
+}
+
+.font-size\:page-heading {
+  font-size: clamp(2.5rem, 8vw, 4.5rem);
+}
+
+.font-style\:italic {
+  font-style: italic;
+}
+
+.font-weight\:bold {
+  font-weight: bold;
+}
+
+.text\:uppercase {
+  text-transform: uppercase;
+}
+
+/* FOR GLOBAL NAV */
+
+.global-nav {
+  bottom: 0;
+  position: fixed;
+  right: 0;
+
+  padding: 1rem;
+}
+
+.global-nav ul {
+  display: flex;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
