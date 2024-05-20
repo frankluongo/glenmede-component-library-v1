@@ -1,7 +1,8 @@
 {{#> "layouts/main.hbs"}}
 
-{{> "components/header.hbs" }}
-{{> "components/hero.hbs" }}
+{{> "components/v1/header.hbs" }}
+{{> "components/v1/hero-b.hbs" }}
+{{!-- {{> "components/v1/hero.hbs" }} --}}
 <div class="container flex-grid padded-section">
   <div class="flex-grid:column flex-columns justify-content:center align-items:start" style="--item-width: 18rem;">
     <article class="flex-columns">
@@ -14,14 +15,14 @@
         generation family members and how to work with your advisors to address them to fuel family success.
       </p>
     </article>
-    {{> "components/speaker.hbs" }}
+    {{> "components/v1/speaker.hbs" }}
   </div>
   <div class="flex-grid:column flex-columns" style="--item-width: 25rem;">
     <article class="flex-columns color:blue" style="--gap: 0.5rem;">
       <h3 class="text:label">Schedule</h3>
       <h4 class="font-family:heading font-size:section-subheading">Tuesday, May 7th 2024</h4>
       <div>
-        <p class="font-weight:bold">5 PM - 5:30 PM:</p>
+        <p class="font-weight:bold">5 PM - 5:30 PM:</p>`
         <p>Registration & Cocktail Reception</p>
       </div>
       <div>
@@ -29,7 +30,7 @@
         <p>Reception & Dinner</p>
       </div>
     </article>
-    {{> "components/form.hbs" }}
+    {{> "components/v1/form.hbs" }}
   </div>
 </div>
 
