@@ -51,7 +51,10 @@
 }
 
 .hero-b__text {
-  flex: 0 1 25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 0 1 30rem;
   padding: 1rem;
 }
 
