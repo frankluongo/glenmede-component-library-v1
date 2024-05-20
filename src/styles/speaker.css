@@ -46,7 +46,9 @@
 }
 
 .speaker-card-footer__reveal {
+  left: 1rem;
   position: absolute;
+  right: 1rem;
 
   opacity: 0;
   transition: opacity 250ms ease-in-out;
@@ -72,4 +74,16 @@
   height: auto;
   width: 100%;
   object-fit: cover;
+}
+
+@media not (hover: hover) {
+  .speaker-card__footer {
+    height: auto;
+  }
+
+  .speaker-card-footer__reveal {
+    position: static;
+
+    opacity: 1;
+  }
 }

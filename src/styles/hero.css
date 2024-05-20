@@ -1,25 +1,24 @@
 .hero {
-  --image-column: span 12;
-  --text-column: span 12;
-
   padding-block: clamp(1rem, 5vw, 4rem);
 }
 
 .hero__content {
-  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(1rem, 5vw, 3rem);
 }
 
 .hero-content__text {
-  grid-column: var(--text-column);
+  flex: 1 1 20rem;
 }
 
 .hero-content__image {
-  grid-column: var(--image-column);
+  flex: 1 1 28rem;
 }
 
 .hero__image {
   height: auto;
-  width: 100%;
+  max-width: 100%;
 }
 
 .hero__info {
@@ -32,9 +31,6 @@
   margin-top: 1.5rem;
 }
 
-@media (min-width: 850px) {
-  .hero {
-    --image-column: span 5;
-    --text-column: span 7;
-  }
+.hero__title {
+  grid-area: header;
 }
