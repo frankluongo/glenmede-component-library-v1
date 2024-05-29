@@ -1,11 +1,10 @@
 {{#> "layouts/main.hbs"}}
 
 {{> "components/v1/header.hbs" }}
-{{> "components/v1/hero-b.hbs" }}
-{{!-- {{> "components/v1/hero.hbs" }} --}}
-<div class="container flex-grid padded-section">
-  <div class="flex-grid:column flex-columns justify-content:center align-items:start" style="--item-width: 18rem;">
-    <article class="flex-columns">
+{{> "components/v1/hero.hbs" }}
+<div class="wrapper background:sand">
+  <div class="container padded-section">
+    <article class="flex-columns text-align:center restrict-width horizontal:center">
       <p class="font-size:large font-family:heading font-style:italic">
         Join us for dinner and a discussion with Glenmede's Director of the Center for Family Philanthropy and Wealth
         Education Ken Spruill and other Glenmede leaders.
@@ -15,8 +14,9 @@
         generation family members and how to work with your advisors to address them to fuel family success.
       </p>
     </article>
-    {{> "components/v1/speaker.hbs" }}
   </div>
+</div>
+<div class="container flex-grid padded-section">
   <div class="flex-grid:column flex-columns" style="--item-width: 25rem;">
     <article class="flex-columns color:blue" style="--gap: 0.5rem;">
       <h3 class="text:label">Schedule</h3>
@@ -32,14 +32,18 @@
     </article>
     {{> "components/v1/form.hbs" }}
   </div>
+  <div class="flex-grid:column flex-columns justify-content:center align-items:end" style="--item-width: 18rem;">
+    {{!-- {{> "components/v1/speaker.hbs" image='/src/assets/Ken Spruill_crop.webp' variant='speaker-card--full' }} --}}
+    {{> "components/v1/speakers.hbs" }}
+  </div>
 </div>
 
 <div class="wrapper padded-section background:dark-gray text-color:white">
   <section class="container flex-columns">
-    <h2 class="font-size:section-heading font-family:heading font-weight:bold">
+    <h2 class="font-size:section-heading font-family:heading font-weight:bold text-align:center">
       Questions About The Event?
     </h2>
-    <div>
+    <div class="text-align:center">
       <p class="font-size:large">Contact Dineen Williams for more information </p>
       <p>
         Email:
@@ -79,13 +83,13 @@
     </footer>
   </section>
 </div>
-<footer class="wrapper padded-section background:blue text-color:white">
+<footer class="wrapper padded-section background:blue text-color:white text-align:center">
   <div class="container flex-columns font-size:small">
     <address>
       20 Montchanin Road, Suite 2000<br />
       Greenville, DE 19807
     </address>
-    <menu>
+    <menu class="justify-content:center">
       <li>
         <a href="#">Disclosures</a>
       </li>

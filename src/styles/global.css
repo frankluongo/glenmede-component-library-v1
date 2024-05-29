@@ -21,7 +21,7 @@
 /* GLOBAL */
 
 :root {
-  --content-width: 62.5rem;
+  --content-width: 90rem;
   /* COLORS */
   --color-black: #1d252c;
   --color-blue: #033662;
@@ -161,6 +161,10 @@ menu {
   align-items: flex-start;
 }
 
+.align-items\:end {
+  align-items: flex-end;
+}
+
 .container {
   max-width: var(--content-width);
   margin: 0 auto;
@@ -215,12 +219,6 @@ menu {
   grid-column: span 12;
 }
 
-@media (min-width: 1000px) {
-  .md\:grid-column\:span-6 {
-    grid-column: span 6;
-  }
-}
-
 .padded-section {
   padding-block: clamp(1rem, 5vw, 4rem);
 }
@@ -231,7 +229,6 @@ menu {
 /* PRE-DEFINED ELEMENTS */
 
 .text\:label {
-  color: var(--color-gray);
   font-family: var(--font-primary);
   font-size: 0.875rem;
   font-weight: bold;
@@ -290,6 +287,10 @@ menu {
   font-weight: bold;
 }
 
+.text-align\:center {
+  text-align: center;
+}
+
 .text\:uppercase {
   text-transform: uppercase;
 }
@@ -304,8 +305,24 @@ menu {
   background: var(--color-dark-gray);
 }
 
+.background\:sand {
+  background: var(--color-sand);
+}
+
+.horizontal\:center {
+  margin-inline: auto;
+}
+
+.restrict-width {
+  max-width: 55rem;
+}
+
 .text-color\:white {
   color: var(--color-white);
+}
+
+.text-color\:gray {
+  color: var(--color-gray);
 }
 
 .text-color\:black {
@@ -314,23 +331,4 @@ menu {
 
 .text-color\:blue {
   color: var(--color-blue);
-}
-
-/* FOR GLOBAL NAV */
-
-.global-nav {
-  bottom: 0;
-  position: fixed;
-  right: 0;
-
-  padding: 1rem;
-}
-
-.global-nav ul {
-  display: flex;
-  gap: 1rem;
-  margin: 0;
-  padding: 0;
-
-  list-style: none;
 }

@@ -80,6 +80,6 @@
 }
 
 .hero-b__text-padding {
-  --size: calc(100vw - 1000px);
+  --size: calc(100vw - var(--content-width));
   flex: 0 0 calc(var(--size) / 2);
 }

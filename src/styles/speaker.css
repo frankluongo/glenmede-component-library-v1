@@ -1,16 +1,37 @@
 /* COMPONENT: */
 
 .speaker-card {
+  --max-width: 30rem;
+
   position: relative;
 
   width: 100%;
-  max-width: 30rem;
+  max-width: var(--max-width);
 
   color: var(--color-sand);
 
   border-radius: 0.5rem;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   overflow: hidden;
+}
+
+.speaker-card--full {
+  --max-width: 100%;
+}
+
+/* COMPONENT INSIDE CONTAINER: */
+
+.speakers-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.speakers-grid .speaker-card {
+  --max-width: 18rem;
+
+  flex: 1 1 var(--max-width);
+  max-width: 100%;
 }
 
 /* FOOTER */
@@ -71,8 +92,10 @@
 
 .speaker-card__image {
   display: block;
-  height: auto;
+  height: 100%;
   width: 100%;
+
+  aspect-ratio: 2 / 3;
   object-fit: cover;
 }
 
