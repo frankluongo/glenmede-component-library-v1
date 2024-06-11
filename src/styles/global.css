@@ -70,7 +70,7 @@ p {
 }
 
 p {
-  font-family: "Manrope", sans-serif;
+  font-family: var(--font-primary);
   line-height: 1.6;
 }
 
@@ -229,11 +229,29 @@ menu {
 /* PRE-DEFINED ELEMENTS */
 
 .text\:label {
+  color: var(--color-dark-gray);
   font-family: var(--font-primary);
-  font-size: 0.875rem;
+  font-size: 1rem;
   font-weight: bold;
 
   text-transform: uppercase;
+}
+
+.text\:body {
+  font-family: var(--font-primary);
+  font-size: 1.25rem;
+}
+
+.text\:page-title {
+  font-family: var(--font-secondary);
+  font-size: clamp(1rem, 50vw, 4.5rem);
+  font-weight: normal;
+}
+
+.text\:section-title {
+  font-family: var(--font-secondary);
+  font-size: clamp(1rem, 12vw, 1.75rem);
+  font-weight: normal;
 }
 
 .font-family\:heading {
